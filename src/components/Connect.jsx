@@ -29,16 +29,15 @@ export default function Connect() {
   const handleSubmit = async e => {
     e.preventDefault()
     setStatus('sending')
-    try {
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (res.ok) { setStatus('sent'); setForm({ name: '', email: '', subject: '', message: '' }) }
-      else setStatus('error')
-    } catch { setStatus('error') }
-    if (status !== 'sent') setTimeout(() => setStatus('idle'), 4000)
+    // Open default email client with form data pre-filled
+    const subject = encodeURIComponent(form.subject || 'Portfolio Contact')
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    )
+    window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`
+    setStatus('sent')
+    setForm({ name: '', email: '', subject: '', message: '' })
+    setTimeout(() => setStatus('idle'), 4000)
   }
 
   return (

@@ -24,7 +24,7 @@ export const personal = {
   github: 'https://github.com/MH-Shomik',
   linkedin: 'https://www.linkedin.com/in/mehedi-hassan-shomik-08a3a7367',
   twitter: '',
-  resumePdf: '/Updated_Resume.pdf',
+  resumePdf: '/Resume_Shomik.pdf',
 }
 
 export const stats = [
