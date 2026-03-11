@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --accent: #c8ff57;
-    --accent-dim: rgba(200, 255, 87, 0.12);
-    --accent-border: rgba(200, 255, 87, 0.25);
-    --bg: #080808;
-    --surface: #101010;
-    --surface-2: #161616;
-    --border: rgba(255, 255, 255, 0.07);
-    --border-hover: rgba(200, 255, 87, 0.3);
-    --text: #f0ede6;
-    --muted: #5a5a5a;
-    --muted-2: #888;
+    --accent: #3dd9d0;
+    --accent-dim: rgba(61, 217, 208, 0.12);
+    --accent-border: rgba(61, 217, 208, 0.25);
+    --bg: #06080f;
+    --surface: #0c1220;
+    --surface-2: #111828;
+    --border: rgba(80, 120, 180, 0.10);
+    --border-hover: rgba(61, 217, 208, 0.35);
+    --text: #e8f0f5;
+    --muted: #4a5a6d;
+    --muted-2: #6e8ba0;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -132,7 +132,7 @@
 }
 .cursor-ring {
   position: fixed; width: 30px; height: 30px;
-  border: 1.5px solid rgba(200,255,87,0.4); border-radius: 50%;
+  border: 1.5px solid rgba(61,217,208,0.4); border-radius: 50%;
   pointer-events: none; z-index: 99998;
   transform: translate(-50%, -50%);
   transition: width 0.18s ease, height 0.18s ease, border-color 0.18s ease;
@@ -148,7 +148,7 @@
 
 /* ─── Nav ────────────────────────────────────── */
 .nav-scrolled {
-  background: rgba(8,8,8,0.92);
+  background: rgba(6,8,15,0.94);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
