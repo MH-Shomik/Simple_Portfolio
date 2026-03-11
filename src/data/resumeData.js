@@ -6,14 +6,14 @@ export const personal = {
   initials: 'MHS',
   tagline: 'Turning data into insight, ideas into products.',
   roles: [
-    'Full-Stack Developer',
+    'Frontend Developer',
     'ML & Data Enthusiast',
     'React Specialist',
     'Computer Science Student',
     'Open Source Contributor',
   ],
   bio: [
-    "I'm a Computer Science & Engineering student at United International University (top 15% of batch), majoring in Data Science. I build full-stack web applications and machine learning solutions that solve real problems.",
+    "I'm a Computer Science & Engineering student at United International University (top 15% of batch), majoring in Data Science. I specialise in frontend development and have hands-on experience building backends and ML solutions that solve real problems.",
     'From interactive 3D restaurant systems to student dropout predictors — I love combining clean UI with intelligent backends. I thrive in both frontend aesthetics and backend logic.',
     "When I'm not coding, I contribute to open-source projects, participate in coding competitions, and explore new technologies to stay ahead of the curve.",
   ],
@@ -159,7 +159,7 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: 'Freelance Full-Stack Developer',
+    role: 'Freelance Frontend Developer',
     company: 'Remote',
     type: 'Freelance',
     period: 'Jan 2024 – Present',
