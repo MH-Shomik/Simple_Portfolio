@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark background with subtle rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#06080f"/>
+
+  <!-- Teal glow ring -->
+  <rect x="1" y="1" width="30" height="30" rx="6.5" stroke="#3dd9d0" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- Letter M — geometric, clean, matches Space Grotesk feel -->
+  <path
+    d="M7 22V10L12.5 18L16 12.5L19.5 18L25 10V22"
+    stroke="#3dd9d0"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Subtle teal dot under M — accent detail -->
+  <circle cx="16" cy="26" r="1.3" fill="#3dd9d0" fill-opacity="0.7"/>
+</svg>

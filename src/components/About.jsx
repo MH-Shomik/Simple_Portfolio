@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { FiMapPin, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { HiAcademicCap } from 'react-icons/hi'
 import { personal, stats, education, certifications, achievements } from '../data/resumeData'
+import profileImg from '../profile.png'
 
 function AnimatedCounter({ target, suffix = '' }) {
   const ref = useRef(null)
@@ -61,10 +62,15 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="flex flex-col items-center lg:items-start gap-6"
           >
-            {/* Avatar placeholder */}
+            {/* Avatar */}
             <div className="relative">
-              <div className="w-52 h-52 rounded-2xl bg-gradient-to-br from-primary/40 to-secondary/40 border-2 border-primary/30 glow flex items-center justify-center text-7xl font-black text-white/30 select-none animate-glow-pulse">
-                {personal.initials}
+              <div className="w-52 h-52 rounded-2xl overflow-hidden border-2 border-primary/30 glow animate-glow-pulse">
+                <img
+                  src={profileImg}
+                  alt={personal.name}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: '50% 15%' }}
+                />
               </div>
               <span className="absolute -bottom-3 -right-3 w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-2xl glow-cyan">
                 💻

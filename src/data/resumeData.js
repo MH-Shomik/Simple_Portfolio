@@ -128,6 +128,7 @@ export const projects = [
     live: 'https://nocturne-rms.netlify.app',
     github: 'https://github.com/MH-Shomik',
     gradient: 'from-violet-600 to-cyan-500',
+    image: '/Nocturne.png',
     featured: true,
   },
   {
@@ -152,6 +153,7 @@ export const projects = [
     live: 'https://www.innerstrength.site',
     github: 'https://github.com/MH-Shomik',
     gradient: 'from-emerald-500 to-teal-600',
+    image: '/image.png',
     featured: true,
   },
 ]

@@ -73,16 +73,24 @@ function ProjectRow({ project, index }) {
             style={{ borderBottom: '1px solid var(--border)' }}
           >
             <div className="pb-8 grid md:grid-cols-3 gap-8">
-              {/* Gradient preview */}
-              <div
-                className={`rounded-xl h-44 bg-gradient-to-br ${project.gradient} flex items-center justify-center md:col-span-1`}
-              >
-                <div className="text-center px-4">
-                  <p className="font-display font-black text-2xl text-white/80 uppercase tracking-tight">
-                    {project.title}
-                  </p>
-                  <p className="text-white/50 text-xs mt-1 font-mono-custom">{project.subtitle}</p>
-                </div>
+              {/* Project preview */}
+              <div className="rounded-xl h-44 md:col-span-1 overflow-hidden relative">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className={`w-full h-full bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                    <div className="text-center px-4">
+                      <p className="font-display font-black text-2xl text-white/80 uppercase tracking-tight">
+                        {project.title}
+                      </p>
+                      <p className="text-white/50 text-xs mt-1 font-mono-custom">{project.subtitle}</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Details */}

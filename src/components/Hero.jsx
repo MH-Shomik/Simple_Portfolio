@@ -142,8 +142,7 @@ export default function Hero() {
           {/* Bottom bar */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-            className="pt-5 flex items-center justify-between border-t"
-            style={{ borderColor: 'rgba(80,120,180,0.2)' }}
+            className="pt-5 flex items-center justify-between"
           >
             <span className="label">{personal.email}</span>
             <div className="flex gap-6">

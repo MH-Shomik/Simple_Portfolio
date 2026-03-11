@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { personal, education, experience, certifications, achievements, stats } from '../data/resumeData'
+import profileImg from '../profile.png'
 
 const rise = (delay = 0) => ({
   hidden: { opacity: 0, y: 28 },
@@ -135,10 +136,15 @@ export default function Chronicle() {
             {/* Avatar block */}
             <div className="flex items-center gap-5">
               <div
-                className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-display font-black shrink-0 border"
-                style={{ background: 'var(--surface-2)', borderColor: 'var(--border-hover)', color: 'var(--accent)' }}
+                className="w-20 h-20 rounded-2xl shrink-0 border overflow-hidden"
+                style={{ borderColor: 'var(--border-hover)', boxShadow: '0 0 0 2px var(--accent-dim, rgba(61,217,208,0.2))' }}
               >
-                {personal.initials}
+                <img
+                  src={profileImg}
+                  alt={personal.name}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: '50% 15%' }}
+                />
               </div>
               <div>
                 <p className="font-display font-semibold text-page-text text-lg">{personal.name}</p>
