@@ -64,8 +64,7 @@ export default function Hero() {
           src={profileImg}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: '65% 65%' }}
+          className="w-full h-full object-cover object-[50%_20%] sm:object-[65%_65%]"
         />
         {/* Dark overlay — heavy at bottom, lighter at top so face is visible */}
         <div className="absolute inset-0" style={{
