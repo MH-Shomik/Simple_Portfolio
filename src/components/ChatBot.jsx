@@ -148,7 +148,7 @@ export default function ChatBot() {
               exit={{ opacity: 0, scale: 0.92, y: 16 }}
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                width: 360,
+                width: 'min(360px, calc(100vw - 24px))',
                 maxHeight: 520,
                 display: 'flex',
                 flexDirection: 'column',

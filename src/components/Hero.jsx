@@ -142,9 +142,9 @@ export default function Hero() {
           {/* Bottom bar */}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-            className="pt-5 flex items-center justify-between"
+            className="pt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
           >
-            <span className="label">{personal.email}</span>
+            <span className="label hidden sm:block">{personal.email}</span>
             <div className="flex gap-6">
               {[
                 { l: 'GITHUB',   h: personal.github },

@@ -1,6 +1,7 @@
 ﻿import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import { personal } from '../data/resumeData'
 
 const NAV = [
   { id: 'about',   label: 'ABOUT' },
@@ -66,14 +67,14 @@ export default function Navbar() {
         {/* Resume + Hamburger */}
         <div className="flex items-center gap-4">
           <motion.a
-            href="/Updated_Resume.pdf" download
+            href={personal.resumePdf} download
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
             className="hidden md:inline-flex btn-ghost py-2 px-5 text-xs"
           >
             RESUME
           </motion.a>
           <button
-            className="md:hidden hover:text-accent transition-colors"
+            className="md:hidden p-2 hover:text-accent transition-colors"
             style={{ color: 'var(--muted-2)' }}
             onClick={() => setOpen(v => !v)} aria-label="Menu"
           >
@@ -93,10 +94,10 @@ export default function Navbar() {
           >
             {NAV.map(n => (
               <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
-                className={`${linkCls(n.id)} text-base`}
+                className={`${linkCls(n.id)} text-base py-2.5 block`}
               >{n.label}</a>
             ))}
-            <a href="/Updated_Resume.pdf" download
+            <a href={personal.resumePdf} download
                className="btn-accent self-start mt-2 text-xs px-5 py-2.5">
               DOWNLOAD RESUME
             </a>

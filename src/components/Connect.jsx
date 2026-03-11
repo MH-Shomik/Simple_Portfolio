@@ -95,7 +95,7 @@ export default function Connect() {
 
           {/* ── Right — Form ── */}
           <motion.div {...FADE(0.2)} className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="card p-8 flex flex-col gap-5">
+            <form onSubmit={handleSubmit} className="card p-5 sm:p-8 flex flex-col gap-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
                   <label className="label" style={{ color: 'var(--muted)' }}>NAME</label>
