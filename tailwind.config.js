@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#c8ff57',
-        bg: '#080808',
-        surface: '#101010',
-        'surface-2': '#161616',
-        muted: '#5a5a5a',
-        'muted-2': '#888888',
-        'page-text': '#f0ede6',
+        accent: '#3dd9d0',
+        bg: '#06080f',
+        surface: '#0c1220',
+        'surface-2': '#111828',
+        muted: '#4a5a6d',
+        'muted-2': '#6e8ba0',
+        'page-text': '#e8f0f5',
       },
       fontFamily: {
         display: ['Space Grotesk', 'sans-serif'],
