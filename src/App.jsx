@@ -7,6 +7,7 @@ import Connect      from './components/Connect'
 import Footer       from './components/Footer'
 import CustomCursor from './components/CustomCursor'
 import ScrollProgress from './components/ScrollProgress'
+import ChatBot from './components/ChatBot'
 
 export default function App() {
   return (
@@ -28,6 +29,9 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* AI assistant floating widget */}
+      <ChatBot />
     </>
   )
 }

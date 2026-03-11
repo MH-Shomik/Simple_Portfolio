@@ -80,16 +80,7 @@ export default function Hero() {
       {/* ── Foreground content ── */}
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-10 pt-4 pb-14 flex flex-col min-h-screen">
 
-        {/* Clock row */}
-        <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}
-          className="flex items-center justify-end mb-auto flex-wrap gap-4"
-        >
-          <div className="flex items-center gap-5">
-            <span className="label">📍 DHAKA, BD</span>
-            <span className="label font-mono-custom">{clock} (BST)</span>
-          </div>
-        </motion.div>
+        
 
         {/* Push content to bottom */}
         <div className="mt-auto pt-16">
