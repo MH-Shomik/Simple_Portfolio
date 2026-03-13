@@ -19,7 +19,17 @@
 
 ## ✨ Overview
 
-A blazing-fast, single-page personal portfolio built to impress recruiters and collaborators. Every pixel is intentional — dark editorial aesthetic, smooth Framer Motion animations, and a fully client-side AI chatbot trained on resume data using **TF-IDF + Cosine Similarity** (no API key needed).
+A blazing-fast, single-page personal portfolio built to impress recruiters and collaborators. Upgraded with an interactive **Local CMS Admin Panel**, premium glassmorphism aesthetics, advanced motion stagger reveals, and a fully client-side AI chatbot trained on resume data using **TF-IDF + Cosine Similarity** (no API key needed).
+
+---
+
+## 🔥 New Features: Admin CMS Panel
+Manage your entire portfolio without touching a line of code!
+- Accessed by navigating to `/admin`
+- **Secured** behind Environment Variable authentication (`VITE_ADMIN_PASSWORD`).
+- Update personal information, tagging lines, CVs, and hero profile photos.
+- **Dynamic Projects & Skills Manager**: Add, edit, remove, and restyle your tech stack and projects directly locally.
+- Instantly syncs across widgets using an intelligent **Global Data Context + LocalStorage** fallback ecosystem.
 
 ---
 
@@ -42,11 +52,6 @@ Bot:  "Mehedi is an ML & Data Science enthusiast! 🤖
        scikit-learn (76%), pandas (82%), NumPy (80%)…"
 ```
 
-**How it works:**
-1. At build time, all training patterns are tokenized and TF-IDF vectors are computed per intent
-2. On user input, the query is vectorized and cosine similarity is scored against every intent vector
-3. The best-matching intent (above 0.10 confidence threshold) returns a curated answer
-
 ---
 
 ## 🛠️ Tech Stack
@@ -54,60 +59,21 @@ Bot:  "Mehedi is an ML & Data Science enthusiast! 🤖
 | Layer | Technology |
 |---|---|
 | **Framework** | React 18 + Vite 5 |
-| **Styling** | Tailwind CSS 3.4 + CSS custom properties |
+| **Routing** | React Router DOM v6 |
+| **Styling** | Tailwind CSS 3.4 + Custom Tokens |
 | **Animation** | Framer Motion 11 |
 | **Icons** | react-icons 5, Devicon CDN |
 | **AI / ML** | Custom TF-IDF engine (vanilla JS, zero dependencies) |
-| **Forms** | Formspree |
-| **Fonts** | Space Grotesk · Inter · JetBrains Mono |
 
 ---
 
 ## 🎨 Design System
 
-- **Background:** Deep navy-black `#06080f` — extracted from profile photo
-- **Accent:** Teal-cyan `#3dd9d0`
-- **Typography:** Space Grotesk (display) · Inter (body) · JetBrains Mono (labels/code)
-- **Motion:** Spring-based page transitions, stagger reveals, scroll-triggered animations
-- **Details:** Custom cursor, scroll progress bar, noise texture overlay, floating social sidebar
-
----
-
-## 📄 Sections
-
-| Section | Description |
-|---|---|
-| **Hero** | Full-screen photo background, typewriter role animation, stats, CTAs |
-| **Chronicle** | Vertical timeline — education, experience, certifications & achievements |
-| **Arsenal** | Tech stack icon grid grouped by category using Devicon |
-| **Works** | Accordion-style numbered project showcase with live links |
-| **Connect** | Contact details + Formspree-powered message form |
-| **Footer** | 3-column editorial layout |
-| **AI Chatbot** | Floating chat widget (bottom-right) — ask anything about Mehedi |
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── Hero.jsx            # Full-screen landing section
-│   ├── Chronicle.jsx       # Timeline section
-│   ├── Arsenal.jsx         # Tech stack grid
-│   ├── Works.jsx           # Projects accordion
-│   ├── Connect.jsx         # Contact section
-│   ├── ChatBot.jsx         # AI chatbot UI
-│   ├── Navbar.jsx
-│   ├── Footer.jsx
-│   ├── CustomCursor.jsx
-│   └── ScrollProgress.jsx
-├── data/
-│   ├── resumeData.js       # Single source of truth for all content
-│   └── chatbotData.js      # ML training intents (25 classes)
-└── utils/
-    └── chatbotEngine.js    # TF-IDF + cosine similarity engine
-```
+- **Background:** Deep navy-black `#070c16` paired with teal & orange aura layers.
+- **Accent:** Electric Teal `#22f0cb`
+- **Typography:** Sora (body) · Space Grotesk (display) · JetBrains Mono (labels/code)
+- **Motion:** Spring-based page transitions, stagger reveals, lazy image loading.
+- **Details:** Glassmorphism CMS panels, custom animated cursor, scroll progress bar, floating interactive UI components.
 
 ---
 
@@ -120,12 +86,20 @@ cd Simple_Portfolio
 
 # Install dependencies
 npm install
-
-# Start dev server
-npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+### Important: Environment Variables
+Before running the app, create a `.env` file at the root level and add your securely-chosen Admin password:
+```env
+VITE_ADMIN_PASSWORD=your_super_secret_password
+```
+
+### Start Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) (Your Portfolio). 
+Open [http://localhost:5173/admin](http://localhost:5173/admin) (Admin panel).
 
 ### Build for production
 
@@ -134,28 +108,7 @@ npm run build     # outputs to dist/
 npm run preview   # preview production build locally
 ```
 
-Deploy the `dist/` folder to **Netlify**, **Vercel**, or **GitHub Pages**.
-
-> **Note:** Replace `YOUR_FORM_ID` in `src/components/Connect.jsx` with your actual [Formspree](https://formspree.io) endpoint before deploying.
-
----
-
-## 🧩 Customization
-
-All personal content lives in one file — **`src/data/resumeData.js`**. Update it and everything (hero, timeline, projects, skills, contact) rebuilds automatically.
-
-To retrain the chatbot with new info, add or edit intents in **`src/data/chatbotData.js`**.
-
----
-
-## 📬 Contact
-
-| | |
-|---|---|
-| **Email** | mh70357@gmail.com |
-| **LinkedIn** | [mehedi-hassan-shomik](https://www.linkedin.com/in/mehedi-hassan-shomik-08a3a7367) |
-| **GitHub** | [MH-Shomik](https://github.com/MH-Shomik) |
-| **Location** | Dhaka, Bangladesh |
+Ensure you configure the `VITE_ADMIN_PASSWORD` securely in the dashboard settings of your hosting platform (like Vercel, Netlify).
 
 ---
 
@@ -164,5 +117,4 @@ To retrain the chatbot with new info, add or edit intents in **`src/data/chatbot
 Made with ❤️ by **Mehedi Hassan Shomik**
 
 *Computer Science & Engineering · United International University · Top 15% of batch*
-
 </div>
