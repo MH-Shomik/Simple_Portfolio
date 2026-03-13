@@ -1,37 +1,36 @@
-import Navbar       from './components/Navbar'
-import Hero         from './components/Hero'
-import Chronicle    from './components/Chronicle'
-import Arsenal      from './components/Arsenal'
-import Works        from './components/Works'
-import Connect      from './components/Connect'
-import Footer       from './components/Footer'
-import CustomCursor from './components/CustomCursor'
-import ScrollProgress from './components/ScrollProgress'
-import ChatBot from './components/ChatBot'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { DataProvider } from './context/DataContext';
+
+import Portfolio from './pages/Portfolio';
+import AdminLogin from './pages/Admin/AdminLogin';
+import AdminPanel from './pages/Admin/AdminPanel';
+
+// Protected route wrapper
+function ProtectedRoute({ children }) {
+  const isAuth = localStorage.getItem('admin_auth') === 'true';
+  return isAuth ? children : <Navigate to="/admin" />;
+}
 
 export default function App() {
   return (
-    <>
-      {/* Global helpers */}
-      <CustomCursor />
-      <ScrollProgress />
-
-      {/* Navigation */}
-      <Navbar />
-
-      {/* Page sections */}
-      <main>
-        <Hero />
-        <Chronicle />
-        <Arsenal />
-        <Works />
-        <Connect />
-      </main>
-
-      <Footer />
-
-      {/* AI assistant floating widget */}
-      <ChatBot />
-    </>
-  )
+    <DataProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Public Portfolio Route */}
+          <Route path="/" element={<Portfolio />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route 
+            path="/admin/dashboard" 
+            element={
+              <ProtectedRoute>
+                <AdminPanel />
+              </ProtectedRoute>
+            } 
+          />
+        </Routes>
+      </BrowserRouter>
+    </DataProvider>
+  );
 }
