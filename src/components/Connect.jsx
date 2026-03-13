@@ -1,15 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend, FiCheck } from 'react-icons/fi'
-import { personal } from '../data/resumeData'
-
-const INFO_ITEMS = [
-  { icon: FiMail,    label: 'EMAIL',    value: personal.email,    href: `mailto:${personal.email}` },
-  { icon: FiPhone,   label: 'PHONE',    value: personal.phone,    href: `tel:${personal.phone}` },
-  { icon: FiMapPin,  label: 'LOCATION', value: personal.location, href: null },
-  { icon: FiGithub,  label: 'GITHUB',   value: 'MH-Shomik',       href: personal.github },
-  { icon: FiLinkedin,label: 'LINKEDIN', value: 'mehedi-hassan-shomik', href: personal.linkedin },
-]
+import { useData } from '../context/DataContext'
 
 const FADE = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -19,6 +11,17 @@ const FADE = (delay = 0) => ({
 })
 
 export default function Connect() {
+  const { data } = useData()
+  const { personal } = data
+
+  const INFO_ITEMS = [
+    { id: 'email', icon: FiMail,    label: 'EMAIL',    value: personal.email,    href: `mailto:${personal.email}` },
+    { id: 'phone', icon: FiPhone,   label: 'PHONE',    value: personal.phone,    href: `tel:${personal.phone}` },
+    { id: 'loc', icon: FiMapPin,  label: 'LOCATION', value: personal.location, href: null },
+    { id: 'gh', icon: FiGithub,  label: 'GITHUB',   value: 'Profile',       href: personal.github },
+    { id: 'li', icon: FiLinkedin,label: 'LINKEDIN', value: 'Profile', href: personal.linkedin },
+  ]
+
   const ref    = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [form,    setForm]    = useState({ name: '', email: '', subject: '', message: '' })

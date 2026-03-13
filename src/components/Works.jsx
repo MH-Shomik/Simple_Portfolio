@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { FiGithub, FiExternalLink, FiChevronDown } from 'react-icons/fi'
-import { projects } from '../data/resumeData'
+import { useData } from '../context/DataContext'
 
 function ProjectRow({ project, index }) {
   const [open, setOpen] = useState(false)
@@ -79,6 +79,7 @@ function ProjectRow({ project, index }) {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 ) : (
@@ -129,6 +130,9 @@ function ProjectRow({ project, index }) {
 }
 
 export default function Works() {
+  const { data } = useData()
+  const { projects } = data
+
   const ref    = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 

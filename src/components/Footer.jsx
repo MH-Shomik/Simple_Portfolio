@@ -1,5 +1,5 @@
 import { FiGithub, FiLinkedin, FiMail, FiPhone, FiMapPin, FiArrowUp } from 'react-icons/fi'
-import { personal } from '../data/resumeData'
+import { useData } from '../context/DataContext'
 
 const QUICK_LINKS = [
   { label: 'ABOUT',    href: '#about' },
@@ -8,13 +8,16 @@ const QUICK_LINKS = [
   { label: 'CONTACT',  href: '#contact' },
 ]
 
-const SOCIALS = [
-  { icon: FiGithub,   label: 'GITHUB',   href: personal.github },
-  { icon: FiLinkedin, label: 'LINKEDIN', href: personal.linkedin },
-  { icon: FiMail,     label: 'EMAIL',    href: `mailto:${personal.email}` },
-]
-
 export default function Footer() {
+  const { data } = useData()
+  const { personal } = data
+
+  const SOCIALS = [
+    { icon: FiGithub,   label: 'GITHUB',   href: personal.github },
+    { icon: FiLinkedin, label: 'LINKEDIN', href: personal.linkedin },
+    { icon: FiMail,     label: 'EMAIL',    href: `mailto:${personal.email}` },
+  ]
+
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (

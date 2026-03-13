@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { personal, education, experience, certifications, achievements, stats } from '../data/resumeData'
+import { useData } from '../context/DataContext'
 import profileImg from '../profile.png'
 
 const rise = (delay = 0) => ({
@@ -51,6 +51,9 @@ function StatBox({ value, suffix, label }) {
 }
 
 export default function Chronicle() {
+  const { data } = useData()
+  const { personal, education, experience, certifications, achievements, stats } = data
+
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
@@ -140,8 +143,9 @@ export default function Chronicle() {
                 style={{ borderColor: 'var(--border-hover)', boxShadow: '0 0 0 2px var(--accent-dim, rgba(61,217,208,0.2))' }}
               >
                 <img
-                  src={profileImg}
+                  src={personal.profileImgUrl || profileImg}
                   alt={personal.name}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: '50% 15%' }}
                 />

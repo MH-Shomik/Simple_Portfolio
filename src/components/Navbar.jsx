@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
-import { personal } from '../data/resumeData'
+import { useData } from '../context/DataContext'
 
 const NAV = [
   { id: 'about',   label: 'ABOUT' },
@@ -11,6 +11,9 @@ const NAV = [
 ]
 
 export default function Navbar() {
+  const { data } = useData()
+  const { personal } = data
+
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen]         = useState(false)
   const [active, setActive]     = useState('')

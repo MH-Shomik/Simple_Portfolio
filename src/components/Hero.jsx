@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FiArrowUpRight } from 'react-icons/fi'
-import { personal } from '../data/resumeData'
+import { useData } from '../context/DataContext'
 import profileImg from '../profile.png'
 
 function useClock() {
@@ -52,6 +52,9 @@ const rise = {
 }
 
 export default function Hero() {
+  const { data } = useData()
+  const { personal, stats } = data
+
   const clock = useClock()
   const role  = useTypewriter(personal.roles)
 
@@ -61,9 +64,11 @@ export default function Hero() {
       {/* ── Full-screen background photo ── */}
       <div className="absolute inset-0 z-0">
         <img
-          src={profileImg}
-          alt=""
+          src={personal.profileImgUrl || profileImg}
+          alt="Hero background"
           aria-hidden="true"
+          fetchPriority="high"
+          loading="eager"
           className="w-full h-full object-cover object-[50%_20%] sm:object-[65%_65%]"
         />
         {/* Dark overlay — heavy at bottom, lighter at top so face is visible */}
