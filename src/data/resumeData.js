@@ -156,6 +156,18 @@ export const projects = [
     image: '/image.png',
     featured: true,
   },
+  {
+    id: 4,
+    title: 'Career Forecaster & Salary Predictor AI',
+    subtitle: 'ML & GenAI Web Application',
+    description:
+      'An end-to-end Machine Learning web app predicting professional AI automation risk and expected salary. Features Explainable AI (SHAP) for transparent predictions and integrates Google Gemini for personalized career coaching.',
+    tech: ['Python', 'XGBoost', 'Streamlit', 'Plotly', 'Gemini AI', 'SHAP'],
+    live: '',
+    github: 'https://github.com/MH-Shomik/Career-Forecaster-and-Salary-Predictor-AI.git',
+    gradient: 'from-blue-600 to-indigo-600',
+    featured: true,
+  },
 ]
 
 export const experience = [
