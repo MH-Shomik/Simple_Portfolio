@@ -192,6 +192,18 @@ export const projects = [
     gradient: 'from-indigo-600 to-purple-600',
     featured: true,
   },
+  {
+    id: 7,
+    title: 'EduSync',
+    subtitle: 'Campus Digital Ecosystem',
+    description:
+      'An all-in-one digital ecosystem designed to streamline university campus life. Centralizes essential services including a marketplace, rentals, jobs, food delivery, and tutoring—connecting students, faculty, and small businesses.',
+    tech: ['React', 'Three.js', 'Tailwind CSS', 'Vite', 'React Router'],
+    live: '',
+    github: 'https://github.com/CringyNoob/EduSync.git',
+    gradient: 'from-fuchsia-600 to-pink-600',
+    featured: true,
+  },
 ]
 
 export const experience = [
