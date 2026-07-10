@@ -168,6 +168,7 @@ export const experience = [
     bullets: [
       'Manage and update the company’s official website and web application content.',
       'Developed and maintain a comprehensive system handling client records, appointments, and billing workflow.',
+      'Led Search Engine Optimization (SEO) efforts, successfully ranking the website at the top of search results for local keywords like "inner strength dhaka".',
       'Ensure continuous platform stability and deliver tailored content updates to meet organizational needs.',
     ],
     color: '#10b981',
