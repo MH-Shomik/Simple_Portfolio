@@ -168,6 +168,18 @@ export const projects = [
     gradient: 'from-blue-600 to-indigo-600',
     featured: true,
   },
+  {
+    id: 5,
+    title: 'UIU NewsHub',
+    subtitle: 'Dynamic News & Alert System',
+    description:
+      'A centralized, real-time web portal bridging communication for university students and faculty. Features include a personalized academic dashboard, real-time AJAX-powered emergency alerts, and a modern glassmorphism UI.',
+    tech: ['PHP', 'JavaScript', 'Tailwind CSS', 'MySQL', 'AJAX'],
+    live: '',
+    github: 'https://github.com/MH-Shomik/uiu_newsHub.git',
+    gradient: 'from-rose-500 to-red-600',
+    featured: true,
+  },
 ]
 
 export const experience = [
