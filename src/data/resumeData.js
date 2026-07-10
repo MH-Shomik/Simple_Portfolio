@@ -161,6 +161,19 @@ export const projects = [
 export const experience = [
   {
     id: 1,
+    role: 'Web Developer & Content Manager',
+    company: 'Inner Strength',
+    type: 'Part-time',
+    period: 'Present',
+    bullets: [
+      'Manage and update the company’s official website and web application content.',
+      'Developed and maintain a comprehensive system handling client records, appointments, and billing workflow.',
+      'Ensure continuous platform stability and deliver tailored content updates to meet organizational needs.',
+    ],
+    color: '#10b981',
+  },
+  {
+    id: 2,
     role: 'Freelance Frontend Developer',
     company: 'Remote',
     type: 'Freelance',
@@ -173,7 +186,7 @@ export const experience = [
     color: '#7c3aed',
   },
   {
-    id: 2,
+    id: 3,
     role: 'University Coursework & Lab Projects',
     company: 'United International University',
     type: 'Academic',
