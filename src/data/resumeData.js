@@ -1,5 +1,5 @@
 // ─── Resume Data ─────────────────────────────────────────────────────────────
-// Sourced from: Updated_Resume.pdf  |  Last updated: March 2026
+// Sourced from: Updated_Resume.pdf  |  Last updated: July 2026
 
 export const personal = {
   name: 'Mehedi Hassan Shomik',
