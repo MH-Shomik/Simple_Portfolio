@@ -151,7 +151,7 @@ export const projects = [
       'A comprehensive web application for a child development care organization. I am currently employed part-time to manage, maintain, and continuously update the platform and website content, streamlining their entire operational workflow.',
     tech: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
     live: 'https://www.innerstrength.site',
-    github: 'https://github.com/MH-Shomik',
+    github: 'https://github.com/MH-Shomik/Inner-Strength-Neurodevelopment-Care.git',
     gradient: 'from-emerald-500 to-teal-600',
     image: '/image.png',
     featured: true,
