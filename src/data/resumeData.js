@@ -148,7 +148,7 @@ export const projects = [
     title: 'Inner Strength',
     subtitle: 'Child Development Care Management System',
     description:
-      'A real-world web application for a Dhaka-based child development care organization. Manages the entire company workflow — client records, appointments, staff, and billing — with a fully responsive UI.',
+      'A comprehensive web application for a child development care organization. I am currently employed part-time to manage, maintain, and continuously update the platform and website content, streamlining their entire operational workflow.',
     tech: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
     live: 'https://www.innerstrength.site',
     github: 'https://github.com/MH-Shomik',
