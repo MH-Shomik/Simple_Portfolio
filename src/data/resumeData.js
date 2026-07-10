@@ -204,6 +204,18 @@ export const projects = [
     gradient: 'from-fuchsia-600 to-pink-600',
     featured: true,
   },
+  {
+    id: 8,
+    title: 'UIU SPRS',
+    subtitle: 'Student Problem Reporting System',
+    description:
+      'An intelligent platform designed to transform university administration communication. Features AI-powered issue routing, specialized dashboards for students and staff, real-time progress tracking, and a modern glassmorphism UI.',
+    tech: ['PHP', 'Tailwind CSS', 'JavaScript', 'Vite', 'MySQL'],
+    live: '',
+    github: 'https://github.com/Rayat-7/uiusprs.git',
+    gradient: 'from-orange-500 to-amber-500',
+    featured: true,
+  },
 ]
 
 export const experience = [
