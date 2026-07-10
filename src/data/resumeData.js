@@ -180,6 +180,18 @@ export const projects = [
     gradient: 'from-rose-500 to-red-600',
     featured: true,
   },
+  {
+    id: 6,
+    title: 'ReportMate',
+    subtitle: 'Real-Time Crime Reporting System',
+    description:
+      'A full-featured web application for community safety. Enables real-time crime reporting with interactive Google Maps integration, geolocation-based alerts, custom safety zones, and secure user messaging.',
+    tech: ['PHP', 'JavaScript', 'Tailwind CSS', 'MySQL', 'Google Maps API'],
+    live: '',
+    github: 'https://github.com/MH-Shomik/ReportMate-Realtime-Crime-Reporting.git',
+    gradient: 'from-indigo-600 to-purple-600',
+    featured: true,
+  },
 ]
 
 export const experience = [
